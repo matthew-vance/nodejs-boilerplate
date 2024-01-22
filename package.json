@@ -1,0 +1,27 @@
+{
+  "name": "us_nrhp",
+  "version": "1.0.0",
+  "description": "United States National Register of Historic Places",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon src/main.ts",
+    "start": "node dist/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Matthew Vance",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "nodemon": "^3.0.3",
+    "prettier": "^3.2.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "packageManager": "pnpm@8.14.2"
+}
