@@ -24,7 +24,4 @@
     "checkJs": true,
   },
   "include": ["src/**/*"],
-  "ts-node": {
-    "transpileOnly": true,
-  },
 }
