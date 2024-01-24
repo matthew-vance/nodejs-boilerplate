@@ -1,7 +1,7 @@
 {
   "name": "nodejs-boilerplate",
   "version": "1.0.0",
-  "description": "Node.js boilerplate with settings for ESM, pnpm, TypeScript, ESLint, Prettier, VSCode, and more.",
+  "description": "Node.js boilerplate with settings for ESM, pnpm, TypeScript, ESLint, Prettier, and more.",
   "type": "module",
   "keywords": [],
   "author": "Matthew Vance",
@@ -23,6 +23,8 @@
     "pino": "^8.17.2"
   },
   "devDependencies": {
+    "@tsconfig/node20": "^20.1.2",
+    "@tsconfig/strictest": "^2.0.2",
     "@types/node": "^20.11.5",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
