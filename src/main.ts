@@ -1,5 +1,7 @@
+import { logger } from "@/utils";
+
 function main() {
-  console.log("Hello World!");
+  logger.info("Hello, world!");
 }
 
 main();

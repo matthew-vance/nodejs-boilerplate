@@ -6,6 +6,11 @@
     "moduleResolution": "Bundler",
     "noEmit": true,
 
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["./*"],
+    },
+
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
