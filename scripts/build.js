@@ -7,4 +7,6 @@ await esbuild.build({
   outfile: "dist/index.js",
   packages: "external",
   platform: "node",
+  sourcemap: true,
+  target: ["es2022"],
 });
