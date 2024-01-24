@@ -1,8 +1,11 @@
 {
-  "name": "us_nrhp",
+  "name": "nodejs-boilerplate",
   "version": "1.0.0",
-  "description": "United States National Register of Historic Places",
+  "description": "Node.js boilerplate with settings for ESM, pnpm, TypeScript, ESLint, Prettier, VSCode, and more.",
   "type": "module",
+  "keywords": [],
+  "author": "Matthew Vance",
+  "license": "MIT",
   "scripts": {
     "prebuild": "pnpm clean",
     "build": "tsc",
@@ -11,14 +14,11 @@
     "check:lint": "eslint \"src/**/*.ts\" --ext .ts",
     "check:types": "tsc --noEmit",
     "clean": "rimraf ./dist",
-    "dev": "tsx watch --clear-screen=false src/index.ts",
+    "dev": "tsx watch --clear-screen=false ./src/main.ts",
     "prestart": "pnpm build",
-    "start": "node dist",
+    "start": "node ./dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Matthew Vance",
-  "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.11.5",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
