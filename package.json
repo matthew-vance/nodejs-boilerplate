@@ -4,14 +4,16 @@
   "description": "United States National Register of Historic Places",
   "type": "module",
   "scripts": {
+    "prebuild": "pnpm clean",
     "build": "tsc",
     "check": "concurrently \"pnpm:check:*\"",
     "check:format": "prettier --check \"src/**/*.ts\"",
     "check:lint": "eslint \"src/**/*.ts\" --ext .ts",
     "check:types": "tsc --noEmit",
-    "dev": "nodemon src/main.ts",
-    "start": "pnpm build && node dist/main.js",
     "clean": "rimraf ./dist",
+    "dev": "nodemon src/index.ts",
+    "prestart": "pnpm build",
+    "start": "node dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -33,12 +35,5 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
-  "engines": {
-    "node": ">=20",
-    "pnpm": ">=8"
-  },
-  "packageManager": "pnpm@8.14.2",
-  "dependencies": {
-  }
   "packageManager": "pnpm@8.14.3"
 }
