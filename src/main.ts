@@ -1,7 +1,11 @@
 import { logger } from "@/utils";
 
-function main() {
-  logger.info("Hello, world!");
+import { go } from "./example";
+
+async function main() {
+  await go();
 }
 
-main();
+logger.info("Starting up");
+await main();
+logger.info("Done");
