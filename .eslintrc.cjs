@@ -1,4 +1,7 @@
 module.exports = {
+  env: {
+    node: true,
+  },
   extends: [
     "eslint:recommended",
     "plugin:import/recommended",
@@ -7,33 +10,32 @@ module.exports = {
     "plugin:@typescript-eslint/stylistic-type-checked",
     "prettier",
   ],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    project: true,
-    tsconfigRootDir: __dirname,
-  },
-  settings: {
-    "import/resolver": {
-      typescript: true,
-      node: true,
-    },
-  },
-  plugins: ["@typescript-eslint", "simple-import-sort", "import"],
-  root: true,
-  env: {
-    node: true,
-  },
-  rules: {
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    "import/first": "error",
-    "import/newline-after-import": "error",
-    "import/no-duplicates": "error",
-  },
   overrides: [
     {
       extends: ["plugin:@typescript-eslint/disable-type-checked"],
       files: ["./**/*.{js,cjs}"],
     },
   ],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    project: true,
+    tsconfigRootDir: __dirname,
+  },
+  plugins: ["@typescript-eslint", "simple-import-sort", "import"],
+  root: true,
+  rules: {
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "error",
+    "sort-keys": ["error", "asc", { caseSensitive: false, natural: true }],
+    "sort-vars": ["error", { ignoreCase: true }],
+  },
+  settings: {
+    "import/resolver": {
+      node: true,
+      typescript: true,
+    },
+  },
 };
