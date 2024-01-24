@@ -60,5 +60,6 @@ ESLint is configured to use TypeScript parser and plugin with strict rules. Impo
 
 ## Resources
 
-https://www.totaltypescript.com/build-a-node-app-with-typescript-and-esbuild
-https://www.totaltypescript.com/tsconfig-cheat-sheet
+- https://www.jacobparis.com/content/type-safe-env
+- https://www.totaltypescript.com/build-a-node-app-with-typescript-and-esbuild
+- https://www.totaltypescript.com/tsconfig-cheat-sheet
