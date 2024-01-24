@@ -1,8 +1,6 @@
 {
   "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/node20/tsconfig"],
   "compilerOptions": {
-    "lib": ["ES2023"],
-    "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "noEmit": true,
