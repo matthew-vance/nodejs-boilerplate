@@ -11,6 +11,7 @@
     "check:types": "tsc --noEmit",
     "dev": "nodemon src/main.ts",
     "start": "pnpm build && node dist/main.js",
+    "clean": "rimraf ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,8 +24,12 @@
     "concurrently": "^8.2.2",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "nodemon": "^3.0.3",
     "prettier": "^3.2.4",
+    "rimraf": "^5.0.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
@@ -35,4 +40,5 @@
   "packageManager": "pnpm@8.14.2",
   "dependencies": {
   }
+  "packageManager": "pnpm@8.14.3"
 }
