@@ -1,7 +1,7 @@
 {
   "name": "nodejs-boilerplate",
   "version": "1.0.0",
-  "description": "Node.js boilerplate with settings for ESM, pnpm, TypeScript, ESLint, Prettier, and more.",
+  "description": "Node.js boilerplate with settings for ESM, pnpm, TypeScript, esbuild, ESLint, Prettier, and more.",
   "type": "module",
   "keywords": [],
   "author": "Matthew Vance",
@@ -15,6 +15,9 @@
     "check:types": "tsc",
     "clean": "rimraf ./dist",
     "dev": "tsx watch --clear-screen=false ./src/main.ts",
+    "fix": "concurrently \"pnpm:fix:*\"",
+    "fix:format": "prettier --write \"src/**/*.ts\"",
+    "fix:lint": "eslint \"src/**/*.ts\" --ext .ts --fix",
     "prestart": "pnpm build",
     "start": "node ./dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
