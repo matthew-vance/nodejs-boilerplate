@@ -1,6 +1,6 @@
 import { got } from "got";
 
-import { logger } from "@/utils";
+import { logger } from "@/lib";
 
 export async function go() {
   const url = "https://jsonplaceholder.typicode.com/posts";

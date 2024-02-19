@@ -1,14 +1,24 @@
-import * as esbuild from "esbuild";
+#!/usr/bin/env node
+import process from "node:process";
 
-await esbuild.build({
+import { build, context } from "esbuild";
+
+const watchMode = process.argv.includes("--watch");
+
+const buildOptions = {
   bundle: true,
-  drop: ["console", "debugger"],
   entryPoints: ["src/main.ts"],
   format: "esm",
-  outfile: "dist/index.js",
+  logLevel: "info",
+  outdir: "dist",
   packages: "external",
   platform: "node",
-  sourcemap: true,
   target: ["es2022"],
-  treeShaking: true,
-});
+};
+
+if (watchMode) {
+  const context_ = await context(buildOptions);
+  await context_.watch();
+} else {
+  await build(buildOptions);
+}

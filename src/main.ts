@@ -1,6 +1,6 @@
 import "@/config/env"; // Must be imported first
 
-import { logger } from "@/utils";
+import { logger } from "@/lib";
 
 import { go } from "./example";
 

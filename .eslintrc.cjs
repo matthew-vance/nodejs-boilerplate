@@ -29,8 +29,6 @@ module.exports = {
     "import/no-duplicates": "error",
     "simple-import-sort/exports": "error",
     "simple-import-sort/imports": "error",
-    "sort-keys": ["error", "asc", { caseSensitive: false, natural: true }],
-    "sort-vars": ["error", { ignoreCase: true }],
   },
   settings: {
     "import/resolver": {
